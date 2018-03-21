@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
 import { taeReducer } from './taeReducer'
+import { bookReducer } from './bookReducer'
 
 const reducers = combineReducers({
-  taeReducer
+  taeReducer,
+  bookReducer
 })
 
 export default reducers

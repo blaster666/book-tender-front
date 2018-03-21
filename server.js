@@ -19,13 +19,11 @@ app.prepare().then(() => {
   server.get('/about', (req, res) => {
     app.render(req, res, '/about', req.query)
   })
-  server.get('/', (req, res) => {
+  server.get('/*', (req, res) => {
     app.render(req, res, '/', req.query)
   })
 
-  server.get('*', (req, res) => {
-    handle(req, res)
-  })
+  server.get('*', (req, res) => handle(req, res))
 
   server.listen(port, (err) => {
     if (err) throw err
