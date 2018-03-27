@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      color: #359CD6;
+      background: #E8E8E9;
+    }
+    .container-main{
+      /* background: green; */
+    }
+    .navbar{
+      position: fixed;
+      background:#FFF;
+      height: 50px;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+    .nav {
+      box-shadow: 0 3px 3px rgba(0,0,0,0.08);
+    }
+    .nav a {
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .navbar-detail{
+      float: left;
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 18px; 
+      margin-left: 100px; 
+    }
+    .navbar-detail a{ 
+      margin-left: 50px; 
+      color: rgb(127, 158, 177);
+      text-transform: uppercase;
+    }
+    .mgl-30 a {
+      margin-left: 30px; 
+    }
+    .navbar-auth{
+      display: flex;
+      height: 50px;
+      float: right;
+      color: #FFF;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .btn-green{
+      background: #3cce3b;
+      cursor: pointer;
+      padding: 16px 15px 10px 15px;
+    }
+    .btn-dark-blue {
+      background: #1b4c6e;
+      padding: 16px 15px 10px 15px;
+      cursor: pointer;
+    }
+    .btn-green:hover{ 
+      background: #5cd65c; 
+      transition: .3s;
+    }
+    .btn-dark-blue:hover{ 
+      background: #285c81; 
+      transition: .3s;
+    }
+    .btn-create{
+      color: #d8d812;
+    }
+    .main-app{
+      margin-top: 60px;
+    }
+    .wrap-box{
+      /* margin: 0 15px 0 15px; */
+      padding: 10px;
+    }
+    .wrap-box .box-detail {
+      width: 25%;
+      float: left;
+    }
+    .wrap-box .all-box {
+      width: 74%;
+      float: right;
+    }
+    .box-detail{
+      /* background: darkslategray; */
+      background: rgb(248, 246, 246);
+      position: fixed;
+      border-radius: 3px;
+      height: 500px;
+    }
+    .all-box{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 10px;
+    }
+    .box-item{
+      box-shadow: 0 1px 1px rgba(0,0,0,.1);
+      background: rgb(248, 246, 246);
+      height: 19em;
+      cursor: pointer;
+      border-radius: 3px; 
+      padding: 12px;
+    }
+    .box-item:hover{
+      box-shadow: 0 3px 6px 0 rgba(0,0,0,.16), 0 1px 6px 0 rgba(0,0,0,.23);
+    }
+    .box-item .mgt5 {
+      margin-top: 5px;
+    }
+    .hr-c{
+      margin:10px 0px 10px 0px;
+      border-top: 1px solid #eee;
+    }
+    .picture-box {
+      text-align: center;
+    }
+    .time-box {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
+      color: #131212;
+    }
+    .picture-item{
+      width: 100%;
+      height: auto;
+      border-radius: 3px;
+    }
+    .owner-box {
+      display: flex;
+    }
+    .owner-picture{
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+    }
+    .owner-profile{
+      margin-left: 10px;
+    }
+    .owner-name{
+      font-size: 14px;
+      color: #131212;
+      font-weight: 400;
+    }
+    .owner-name:hover {
+      text-decoration: underline;
+    }
+    .owner-credit {
+      color: #9e9e9e;
+      font-size: 12px;
+      font-weight: 200;
+    }
+    .title-box{
+      text-align: center;
+    }
+    .title-box-name {
+      font-size: 18px;
+      color: #35569b;
+      font-weight: 600;
+    }
+    .title-box-price {
+      color: #e98819;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-main">
+    <div class="nav navbar">
+      <div class="navbar-detail">
+        <a href="">Tender</a>
+        <a href="">Buy</a>
+        <a href="">Sell</a>
+      </div>
+      <div class="navbar-auth">
+        <div class="btn-create" >Create</div>
+        <div class="btn-dark-blue" >Log In</div>
+        <div class="btn-green" >Sign Up</div>
+      </div>
+    </div>
+    <div class="main-app">
+      <div class="wrap-box">
+        <div class="box-detail">
+          <div class="detail-time">20h:40m:20s</div>
+          <div class="detail-title">Lorem, ipsum.</div>
+          <div class="detail-desc">Lorem, ipsum.</div>
+          <div class="detail-picture">Lorem, ipsum.</div>
+          <div class="detail-comment">Lorem, ipsum.</div>
+        </div>
+        <div class="all-box">
+          <div class="box-item">
+            <div class="time-box">20h:40m:20s</div>
+            <div class="title-box mgt5">
+              <span class="title-box-name">Onepiece</span>
+              <span class="title-box-price">- 2000฿฿</span>
+            </div>
+            <div class="owner-box mgt5">
+              <div class="owner-picture"><img class="owner-picture" src="http://media.ufc.tv/fighter_images/1USMAN_KAMARU.png" alt=""></div>
+              <div class="owner-profile">
+                <div class="owner-name">Kukiat Wangtaphan</div>
+                <div class="owner-credit">credit : 900</div>
+              </div>
+            </div>
+            <hr class="hr-c" />
+            <div class="picture-box mgt5">
+              <img class="picture-item" src="http://cd.lnwfile.com/u3y477.jpg" alt="">
+            </div>
+          </div>
+          <div class="box-item">
+            <div class="time-box">20h:40m:20s</div>
+            <div class="title-box mgt5">
+              <span class="title-box-name">Onepiece</span>
+              <span class="title-box-price">- 2000฿฿</span>
+            </div>
+            <div class="owner-box mgt5">
+              <div class="owner-picture"><img class="owner-picture" src="http://media.ufc.tv/fighter_images/1USMAN_KAMARU.png" alt=""></div>
+              <div class="owner-profile">
+                <div class="owner-name">Kukiat Wangtaphan</div>
+                <div class="owner-credit">credit : 900</div>
+              </div>
+            </div>
+            <hr class="hr-c" />
+            <div class="picture-box mgt5">
+              <img class="picture-item" src="http://cd.lnwfile.com/u3y477.jpg" alt="">
+            </div>
+          </div>
+          <div class="box-item">
+            <div class="time-box">20h:40m:20s</div>
+            <div class="title-box mgt5">
+              <span class="title-box-name">Onepiece</span>
+              <span class="title-box-price">- 2000฿฿</span>
+            </div>
+            <div class="owner-box mgt5">
+              <div class="owner-picture"><img class="owner-picture" src="http://media.ufc.tv/fighter_images/1USMAN_KAMARU.png" alt=""></div>
+              <div class="owner-profile">
+                <div class="owner-name">Kukiat Wangtaphan</div>
+                <div class="owner-credit">credit : 900</div>
+              </div>
+            </div>
+            <hr class="hr-c" />
+            <div class="picture-box mgt5">
+              <img class="picture-item" src="http://cd.lnwfile.com/u3y477.jpg" alt="">
+            </div>
+          </div>
+          <div class="box-item">
+            <div class="time-box">20h:40m:20s</div>
+            <div class="title-box mgt5">
+              <span class="title-box-name">Onepiece</span>
+              <span class="title-box-price">- 2000฿฿</span>
+            </div>
+            <div class="owner-box mgt5">
+              <div class="owner-picture"><img class="owner-picture" src="http://media.ufc.tv/fighter_images/1USMAN_KAMARU.png" alt=""></div>
+              <div class="owner-profile">
+                <div class="owner-name">Kukiat Wangtaphan</div>
+                <div class="owner-credit">credit : 900</div>
+              </div>
+            </div>
+            <hr class="hr-c" />
+            <div class="picture-box mgt5">
+              <img class="picture-item" src="http://cd.lnwfile.com/u3y477.jpg" alt="">
+            </div>
+          </div>      
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>

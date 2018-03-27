@@ -10,25 +10,24 @@ import 'isomorphic-unfetch'
 class Tender extends Component {
 
   componentDidMount() {
-    this.props.fetchAllBooks()
+    // this.props.fetchAllBooks()
   }
 
   render() {
     return (
-      <div>
-        <h1>index</h1>
-        {
-          this.props.books.map((book) => {
-            return (
-              <h1 key={book.id}>
-                {book.bookName}
-                <img height="200" width="200" src={book.image}/>
-              </h1>
-            )
-          })
-        }
-        <a onClick={ () => Router.push('/about')}>sss</a>
-        <button onClick={ () => this.props.action('tae') }>click</button>
+      <div className="main-app">
+        <div className="wrap-box">
+          <div className="box-detail">
+            <div className="detail-time">20h:40m:20s</div>
+            <div className="detail-title">Lorem, ipsum.</div>
+            <div className="detail-desc">Lorem, ipsum.</div>
+            <div className="detail-picture">Lorem, ipsum.</div>
+            <div className="detail-comment">Lorem, ipsum.</div>
+          </div>
+          <div className="all-box">
+            
+          </div>
+        </div>
       </div>
     )
   }
