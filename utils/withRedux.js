@@ -15,7 +15,6 @@ export default (mapStateToProps, mapDispatchToProps) => (C) => {
 
   Layout.getInitialProps = async (data) => {
     const { store } = data
-    console.log(store)
     if(C.getInitialProps) {
       await C.getInitialProps(data);
     }

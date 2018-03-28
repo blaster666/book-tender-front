@@ -1,10 +1,14 @@
 import React,{ Component } from 'react'
 import Router from 'next/router'
+import styled from 'styled-components';
+
 // import withRedux from 'next-redux-wrapper'
 import connect from '../utils/withRedux'
 import { initialStore } from '../store/createStore'
 import { bindActionCreators } from 'redux'
 import { action, fetchAllBooks } from '../store/action'
+import CardSideBar from './components/CardSideBar'
+import CardItem from './components/CardItem'
 import 'isomorphic-unfetch'
 
 class Tender extends Component {
@@ -15,23 +19,43 @@ class Tender extends Component {
 
   render() {
     return (
-      <div className="main-app">
-        <div className="wrap-box">
-          <div className="box-detail">
-            <div className="detail-time">20h:40m:20s</div>
-            <div className="detail-title">Lorem, ipsum.</div>
-            <div className="detail-desc">Lorem, ipsum.</div>
-            <div className="detail-picture">Lorem, ipsum.</div>
-            <div className="detail-comment">Lorem, ipsum.</div>
-          </div>
-          <div className="all-box">
-            
-          </div>
-        </div>
-      </div>
+      <MainApp>
+        <WrapPage>
+          <CardSideBar/>
+          <AllCardItem>
+            <CardItem/>
+            <CardItem/>
+            <CardItem/>
+            <CardItem/>
+            <CardItem/>
+            <CardItem/>
+            <CardItem/>
+            <CardItem/>
+            <CardItem/>
+            <CardItem/>
+            <CardItem/>
+          </AllCardItem>
+        </WrapPage>
+      </MainApp>
     )
   }
 }
+
+const MainApp = styled.div`
+  margin-top: 60px;
+`
+
+const WrapPage = styled.div`
+  padding: 10px;
+`
+
+const AllCardItem = styled.div`
+  display: grid;
+  float: right;
+  width: 74%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+`
 
 const mapStateToProps = (state) => {
   const { bookReducer } = state
