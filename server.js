@@ -16,6 +16,9 @@ app.prepare().then(() => {
   server.get('/tender', (req, res) => {
     app.render(req, res, '/tender', req.query)
   })
+  server.get('/create', (req, res) => {
+    app.render(req, res, '/create', req.query)
+  })
   server.get('/about', (req, res) => {
     app.render(req, res, '/about', req.query)
   })

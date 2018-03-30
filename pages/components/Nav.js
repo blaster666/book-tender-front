@@ -1,16 +1,18 @@
 import React from 'react'
 import styled from 'styled-components';
+import Router from 'next/router'
+import Link from 'next/link'
 
 const Nav = (props) => {
   return (
     <NavBar>
       <NavMenu>
-        <NavLink href="">Tender</NavLink>
+        <NavLink onClick={() => Router.push('/tender')}>Tender</NavLink>
         <NavLink href="">Buy</NavLink>
         <NavLink href="">Sell</NavLink>
       </NavMenu>
       <NavAuth>
-        <BtnCreate>Create</BtnCreate>
+        <BtnCreate onClick={() => Router.push('/create')} >Create</BtnCreate>
         <BtnNav color="#1b4c6e" colorHover=" #285c81">Log In</BtnNav>
         <BtnNav color="#3cce3b" colorHover="#5cd65c" >Sign Up</BtnNav>
       </NavAuth>
@@ -54,7 +56,7 @@ const NavAuth = styled.div`
   font-weight: 400;
 `
 
-const BtnCreate = styled.div`
+const BtnCreate = styled.button`
   color: red;
 `
 
